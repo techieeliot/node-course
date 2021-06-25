@@ -1,7 +1,16 @@
-const {name, add} = require('./utils')
+const getNotes = require('./notes')
 
-console.log(name)
+// getNotes() // my initial implementation
 
-const sum = add(1,2)
+const msg = getNotes()
 
-console.log(sum)
+console.log(msg) 
+// Mead's implementation
+
+// const {name, add} = require('./utils')
+
+// console.log(name)
+
+// const sum = add(1,2)
+
+// console.log(sum)
