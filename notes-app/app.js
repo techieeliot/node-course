@@ -1,12 +1,18 @@
-const validator = require('validator')
+const chalk = require('chalk')
 const getNotes = require('./notes')
 
 const msg = getNotes()
-
 console.log(msg)
 
-console.log(validator.isEmail('eliot587@gmail.com')) 
-console.log(validator.isEmail('gmail.com')) 
+console.log(chalk.inverse.bold.green('Success!'))
+console.log(chalk.inverse.bgGreen('-------------'))
 
-console.log(validator.isURL('https://techieeliot.com')) 
-console.log(validator.isURL('@techieeliot')) 
+console.log(chalk.bold.red('Danger, Young Robinson!!!'))
+
+const info = chalk.italic.blue;
+const error = chalk.bold.red;
+const warning = chalk.keyword('yellow');
+
+console.log(info('Get better at node, man!'))
+console.log(error('You really messed something up, dude'))
+console.log(warning('You are pushing it buddy!'))
