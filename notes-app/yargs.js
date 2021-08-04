@@ -41,3 +41,23 @@ yargs.command({
 	}
 })
 
+// Create list command
+yargs.command({
+	command: 'list',
+	describe: 'list the notes',
+	handler: function () {
+		console.log('list the notes')
+	}
+})
+
+// Create read command
+yargs.command({
+	command: 'read',
+	describe: 'read a note',
+	handler: function () {
+		console.log('read a note')
+	}
+})
+
+console.log(yargs.argv)
+
