@@ -1,3 +1,4 @@
+// lessons 16-
 const yargs = require('yargs')
 
 // console.log(process.argv) // not so helpful
@@ -26,10 +27,24 @@ const yargs = require('yargs')
 
 // Create add command
 yargs.command({
-	command: 'add',
-	describe: 'add a new note ',
-	handler: function () {
-		console.log('add a note')
+	command: 'add', // command name
+	describe: 'add a new note ', // optional
+	// handler: function (argv) { // do something with this command
+	// 	console.log('add a note', argv)
+	// },
+	builder: {
+		title: {
+			describe: 'note title', // will not display anything but it's optional
+			demandOption: true, // this means that a title must be there
+			// outputs: ... 
+			// --title    note title                                               [required]
+			// Missing required argument: title
+			type: 'string'
+		}
+	},
+	handler: function (argv) {
+		console.log('object')
+		
 	}
 })
 
@@ -59,5 +74,6 @@ yargs.command({
 	}
 })
 
-console.log(yargs.argv)
+// console.log(yargs.argv) // critical to run the commands, unless you use .parse()
 
+yargs.parse()
