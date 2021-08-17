@@ -40,10 +40,17 @@ yargs.command({
 			// --title    note title                                               [required]
 			// Missing required argument: title
 			type: 'string'
+		},
+		body: {
+			describe: 'note body',
+			demandOption: true,
+			type: 'string'
+
 		}
 	},
 	handler: function (argv) {
-		console.log('object')
+		console.log('My Title:', argv.title)
+		console.log('My Body:', argv.body)
 		
 	}
 })
