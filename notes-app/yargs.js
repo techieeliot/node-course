@@ -81,6 +81,6 @@ yargs.command({
 	}
 })
 
-// console.log(yargs.argv) // critical to run the commands, unless you use .parse()
+// console.log(yargs.argv) // critical to run the commands, unless you use .par se()
 
 yargs.parse()
